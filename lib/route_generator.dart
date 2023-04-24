@@ -9,6 +9,7 @@ import 'core/auth/screens/forget_password_screen.dart';
 import 'core/general/screens/settings_screen.dart';
 import 'core/general/screens/splash_screen.dart';
 import 'core/meds/screens/add_report_screen.dart';
+import 'core/meds/screens/view_report_screen.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -30,10 +31,13 @@ class RouteGenerator {
         );
 
       // meds
-      // case AddReportScreen.id:
       case AddReportScreen.id:
         return MaterialPageRoute(
           builder: (context) => const AddReportScreen(),
+        );
+      case ViewReportScreen.id:
+        return MaterialPageRoute(
+          builder: (context) => const ViewReportScreen(),
         );
 
       // Auth

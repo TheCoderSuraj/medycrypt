@@ -6,6 +6,7 @@ import 'package:medycrypt/widgets/action_button.dart';
 import 'package:medycrypt/widgets/screen_page_setup.dart';
 
 import '../../meds/screens/add_report_screen.dart';
+import '../../meds/screens/view_report_screen.dart';
 import '../widgets/home_navigation_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -38,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 15),
           ActionButton(
             title: "Medical Reports",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ViewReportScreen.id);
+            },
           ),
           const SizedBox(height: 15),
         ],
