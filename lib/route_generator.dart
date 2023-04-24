@@ -8,6 +8,7 @@ import 'core/auth/screens/email_verification_screen.dart';
 import 'core/auth/screens/forget_password_screen.dart';
 import 'core/general/screens/settings_screen.dart';
 import 'core/general/screens/splash_screen.dart';
+import 'core/meds/screens/add_report_screen.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -26,6 +27,13 @@ class RouteGenerator {
       case SplashScreen.id:
         return MaterialPageRoute(
           builder: (context) => const SplashScreen(),
+        );
+
+      // meds
+      // case AddReportScreen.id:
+      case AddReportScreen.id:
+        return MaterialPageRoute(
+          builder: (context) => const AddReportScreen(),
         );
 
       // Auth

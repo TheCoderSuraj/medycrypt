@@ -1,1 +1,1 @@
-const apAppLogoPath = "assets/images/logo.png";
+const apAppLogoPath = "assets/images/logo.jpeg";

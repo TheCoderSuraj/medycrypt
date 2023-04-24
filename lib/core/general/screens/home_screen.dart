@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:medycrypt/utils/constants.dart';
+import 'package:medycrypt/widgets/action_button.dart';
+import 'package:medycrypt/widgets/screen_page_setup.dart';
 
+import '../../meds/screens/add_report_screen.dart';
 import '../widgets/home_navigation_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,6 +22,26 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(kAppName),
+      ),
+      body: ScreenPageSetup(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(
+            width: double.infinity,
+          ),
+          ActionButton(
+            title: "Add New Report",
+            onPressed: () {
+              Navigator.pushNamed(context, AddReportScreen.id);
+            },
+          ),
+          const SizedBox(height: 15),
+          ActionButton(
+            title: "Medical Reports",
+            onPressed: () {},
+          ),
+          const SizedBox(height: 15),
+        ],
       ),
       drawer: HomeNavigationDrawer(
         context: context,
